@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     path: '*',
     element: <NotFound />
   }
-].map(({ path, element }) => ({ path, element: <Wrapper>{element}</Wrapper> })))
+].map(({ path, element }) => ({ path, element: <Wrapper value={element}/> })))
 //mapping through each object to wrap the obj.element in the header
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

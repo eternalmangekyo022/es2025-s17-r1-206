@@ -15,7 +15,6 @@ export default function Header() {
   }, [])
 
   return <>
-  <div className='wrapper'>
     <header>
       <div className='navbar'>
         <img src={Logo} alt="Logo" />
@@ -26,6 +25,5 @@ export default function Header() {
         </>}
       </div>
     </header>
-  </div>
   </>
 }

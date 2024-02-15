@@ -3,6 +3,6 @@
 export default function About() {
 
 	return <>
-		About
+		<span>About</span>
 	</>
 }

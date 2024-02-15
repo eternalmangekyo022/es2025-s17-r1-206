@@ -1,11 +1,7 @@
 import React from 'react'
 import Header from './Header.tsx'
+import Footer from './Footer.tsx'
 
-export default function Wrapper({ children }: { children: React.ReactNode }) {
+const wrapper = ({ value }: { value: React.ReactNode }) => <><Header/><main>{value}</main><Footer/></>
 
-
-	return <>
-		<Header/>
-		{children}
-	</>
-}
+export default wrapper
