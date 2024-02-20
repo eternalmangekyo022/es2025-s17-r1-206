@@ -50,8 +50,15 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  min-height: 69%;
+  height: fit-content;
+  min-height: calc(100vh + 10rem);
+  position: relative;
+  min-height: 69vh;
+  z-index: 10;
 }
 
 footer {
@@ -113,16 +120,14 @@ a {
   align-items: center;
 }
 
-
-
 .hero {
   position: relative;
   $height: 100%;
   height: $height;
   width: 100%;
-  margin-top: 10rem;
+  margin-top: 4rem;
   display: flex;
-  align-items: center;
+  align-items: start;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -160,7 +165,7 @@ a {
       cursor: pointer;
       border-radius: .5rem;
       border: none;
-      width: 13rem;
+      width: 15rem;
       height: 3rem;
       color: white;
     }
@@ -192,6 +197,10 @@ a {
     }
   }
 
+  .hero {
+    height: 80%;
+  }
+
   .hero-text {
     height: 50%;
     margin: 0 !important;
@@ -202,6 +211,22 @@ a {
 
     p {
       font-size: 1.5rem !important;
+    }
+
+    button {
+      font-size: 1.5rem;
+      height: 4rem !important;
+      width: 20rem !important;
+    }
+  }
+}
+
+.card {
+  div {
+    .star {
+      &:not(.active) {
+        filter: saturate(0);
+      }
     }
   }
 }
