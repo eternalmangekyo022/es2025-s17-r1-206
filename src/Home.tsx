@@ -26,9 +26,11 @@ export default function Home() {
 			<div className="blur" />
 		</div>
 		<div className="featured">
-			<h1>Featured Restaurants</h1>
-			<h3>Discover Unforgettable Dining Destinations</h3>
-			<div>
+			<div className='featured-text'>
+				<h1>Featured Restaurants</h1>
+				<h3>Discover Unforgettable Dining Destinations</h3>
+			</div>
+			<div className='featured-cards'>
 				{topRated.map(({ description, image, name, rating }) => <Card image={image} name={name} description={description} rating={rating} />)}
 			</div>
 		</div>
