@@ -10,5 +10,6 @@ export default function Card({ name, description, rating, image }: Card) {
 			</div>
 		</div>
 		<p>{description}</p>
+		<div className='linkto'>View restaurant &raquo;</div>
 	</div>
 }
