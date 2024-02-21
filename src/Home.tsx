@@ -1,13 +1,14 @@
-import { useEffect } from 'react'
 import DineEase from './assets/images/DineEase.png'
+import DineEaseVector from './assets/images/Hero Illustrationvector.svg'
 import Search from './assets/images/Search Icon.png'
 import Card from './components/Card.tsx'
+import Experiences from './components/Experiences.tsx'
 import topRated from './assets/data/top-rated-restauransts.json'
+import useScreen from './hooks/useScreen.ts'
 
 export default function Home() {
-	useEffect(() => {
-		document.title = 'Home Page'
-	}, [])
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const [width,] = useScreen();
 
 	return <>
 		<div className="hero">
@@ -21,7 +22,7 @@ export default function Home() {
 				<button type="button"><img src={Search} alt="Explore Restaurants" />Explore Restaurants</button>
 			</div>
 			<div className="hero-image">
-				<img src={DineEase} alt="DineEase Representation" title="DineEase Representation"/>
+				<img src={width > 768 ? DineEase: DineEaseVector} alt="DineEase Representation" title="DineEase Representation"/>
 			</div>
 			<div className="blur" />
 		</div>
@@ -34,5 +35,6 @@ export default function Home() {
 				{topRated.map(({ description, image, name, rating }) => <Card image={image} name={name} description={description} rating={rating} />)}
 			</div>
 		</div>
+		<Experiences />
 	</>
 }

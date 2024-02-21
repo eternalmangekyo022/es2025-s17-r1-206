@@ -6,7 +6,7 @@ import Contact from './routes/Contact.tsx'
 import NotFound from './routes/NotFound.tsx'
 import Wrapper from './components/Wrapper.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './style.scss'
+import './components/styles/style.scss'
 import './mobile.style.scss'
 
 // import styles, routing, component, routes, and necessary react utilities

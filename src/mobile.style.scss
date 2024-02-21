@@ -11,9 +11,13 @@
 
 	.hero-image {
 		height: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		img {
-			height: 80% !important;
+			width: clamp(10rem, 100vw, 50rem) !important;
+			height: 50vh !important;
 		}
 	}
 
@@ -51,6 +55,10 @@
 	.featured {
 		height: fit-content;
 		.featured-cards {
+			&:before,
+			&:after {
+				content: none;
+			}
 			width: 100%;
 			flex-direction: column;
 			gap: 3rem;
@@ -58,6 +66,7 @@
 			align-items: center;
 			.card {
 				width: 90% !important;
+				max-width: 50rem;
 			}
 		}
 	}

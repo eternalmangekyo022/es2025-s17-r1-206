@@ -1,7 +1,8 @@
 import Star from '../assets/images/star.png'
+import { useId } from 'react'
 
 export default function Card({ name, description, rating, image }: Card) {
-	return <div className='card'>
+	return <div className='card' key={useId()}>
 		<img src={image} alt="" />
 		<div>
 			<span>{name}</span>
