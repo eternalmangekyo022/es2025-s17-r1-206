@@ -15,4 +15,9 @@ declare global {
 		image: string
 		cuisine?: string
 	}
+
+	interface Experience {
+		name: string
+		author: string
+	}
 }
