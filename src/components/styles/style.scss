@@ -2,6 +2,9 @@
 @use "../../global.scss" as global;
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+$header-h: 6vh;
+$footer-h: 25vh;
+
 $shadow:
   0 2px 4px rgba(0, 0, 0, 0.1),
   -2px 0 4px rgba(0, 0, 0, 0.05),
@@ -38,33 +41,14 @@ body,
   height: 100%;
 }
 
-header {
-  position: relative;
-  width: 100%;
-  height: 6%;
-  display: flex;
-  align-items: center;
-
-  .navbar {
-    width: 100%;
-    height: 100%;
-    max-width: 30rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-}
-
 main {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: fit-content;
-  min-height: calc(100vh + 10rem);
+  min-height: calc(100vh - ($footer-h + $header-h));
   position: relative;
-  min-height: 69vh;
   z-index: 10;
 }
 
@@ -72,7 +56,7 @@ footer {
   @extend .flex-center;
   position: relative;
   width: 100%;
-  height: 25%;
+  height: $footer-h;
   background-color: black;
   z-index: 10;
 
@@ -352,14 +336,20 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 75vh;
+    margin-top: -1rem;
   }
 
   .hero-text {
+    * {
+      margin-left: 2vh;
+    }
+
+    width: 100% !important;
     height: 50%;
     margin: 0 !important;
 
     h1 {
-      font-size: xx-large;
+      font-size: 10%;
     }
 
     p {
