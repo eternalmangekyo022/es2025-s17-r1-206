@@ -4,6 +4,7 @@ import Home from './Home.tsx'
 import About from './routes/About.tsx'
 import Contact from './routes/Contact.tsx'
 import NotFound from './routes/NotFound.tsx'
+import PrivacyPolicy from './routes/PrivacyPolicy.tsx'
 import Wrapper from './components/Wrapper.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './components/styles/style.scss'
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact />
+  },
+  {
+    path: '/privacy-policy',
+    element: <PrivacyPolicy/>
   },
   {
     path: '*',
