@@ -17,7 +17,13 @@ declare global {
 	}
 
 	interface Experience {
-		name: string
 		author: string
+		text: string
+	}
+
+	interface Person {
+		name: string
+		position: string
+		img: string
 	}
 }

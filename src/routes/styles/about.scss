@@ -1,0 +1,47 @@
+@use "../../global.scss";
+
+$purple: (
+	light: map-get(global.$purple, light),
+	dark: map-get(global.$purple, dark)
+);
+
+* {
+	margin: 0;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.purple {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 60vh;
+	background-color: map-get(global.$purple, "dark");
+	color: white;
+
+	> div {
+		width: 47%;
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+
+	button {
+		background-color: white;
+		color: map-get($purple, dark);
+		cursor: pointer;
+		border: none;
+		height: 3rem;
+		width: 12rem;
+		border-radius: 0.5rem;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+}
