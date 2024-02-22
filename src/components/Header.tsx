@@ -3,6 +3,7 @@ import useScreen from '../hooks/useScreen.ts'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/images/Logo.png'
 import Menu from '../assets/images/Menu Icon.png'
+import './styles/header.scss'
 
 const linkStyle: React.CSSProperties = { textDecoration: 'none', color: 'black' }
 
