@@ -22,7 +22,7 @@ function Experience({ author, text }: Experience) {
 	return <div className="experience">
 		<p>{text}</p>
 		<span>{author}</span>
-		<img src={Quote} alt="Quote" width='30px' />
+		<img src={Quote} alt="Quote" width='5%' />
 	</div>
 }
 
