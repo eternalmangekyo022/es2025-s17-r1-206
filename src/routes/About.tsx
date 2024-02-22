@@ -36,6 +36,7 @@ export default function About() {
 
 
 	return <>
+	<div className="wrapper">
 		<h1>About Us</h1>
 		<h4>Embracing The Joy of Dining</h4>
 
@@ -51,6 +52,7 @@ export default function About() {
 					<span>{position}</span>
 				</div>)}
 		</div>
+	</div>
 
 		<div className='purple'>
 			<div>
