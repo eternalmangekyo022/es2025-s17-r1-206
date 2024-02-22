@@ -16,7 +16,7 @@ $shadow:
 	background-color: map-get(global.$purple, "light");
 
 	.cards {
-		width: 50%;
+		width: 60%;
 		height: 80%;
 		display: flex;
 		justify-content: space-between;
@@ -41,6 +41,7 @@ $shadow:
 				justify-content: center;
 				align-items: center;
 				padding: 1rem;
+				padding-block: 2.5rem;
 				border-radius: 0.5rem;
 				box-shadow: $shadow;
 
