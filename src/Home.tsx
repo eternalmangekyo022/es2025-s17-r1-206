@@ -19,7 +19,7 @@ export default function Home() {
 					From international dishes to traditional delights and gastronomic adventures,
 					find your perfect spot with DineEase.
 				</p>
-				<button type="button"><img src={Search} alt="Explore Restaurants" />Explore Restaurants</button>
+				<button type="button"><img width='13%' src={Search} alt="Explore Restaurants" />Explore Restaurants</button>
 			</div>
 			<div className="hero-image">
 				<img src={width > 768 ? DineEase: DineEaseVector} alt="DineEase Representation" title="DineEase Representation"/>
@@ -32,7 +32,7 @@ export default function Home() {
 				<h3>Discover Unforgettable Dining Destinations</h3>
 			</div>
 			<div className='featured-cards'>
-				{topRated.map(({ description, image, name, rating }) => <Card image={image} name={name} description={description} rating={rating} />)}
+				{topRated.map(({ description, image, name, rating }, idx) => <Card key={idx} image={image} name={name} description={description} rating={rating} />)}
 			</div>
 		</div>
 		<Experiences />

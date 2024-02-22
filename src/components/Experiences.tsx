@@ -17,9 +17,9 @@ const experiences: Experience[] = [
 	},	
 ];
 
-function Experience({ author, text }: Experience) {
+function Experience({ author, text, idx }: Experience & { idx: number }) {
 
-	return <div className="experience">
+	return <div className="experience" key={idx.toString()}>
 		<p>{text}</p>
 		<span>{author}</span>
 		<img src={Quote} alt="Quote" width='5%' />
@@ -31,12 +31,12 @@ export default function Experiences() {
 	return <div className="experiences">
 		<div className="cards">
 			{width > 768 ? <><div>
-					<Experience author={experiences[0].author} text={experiences[0].text} />
+					<Experience idx={0} author={experiences[0].author} text={experiences[0].text} />
 				</div>
 				<div>
-					{[experiences[1], experiences[2]].map(({ author, text }) => <Experience author={author} text={text} />)}
+					{[experiences[1], experiences[2]].map(({ author, text }, idx) => <Experience idx={idx} author={author} text={text} />)}
 				</div></>: <div>
-					{experiences.map(({ author, text }) => <Experience author={author} text={text} />)}
+					{experiences.map(({ author, text }, idx) => <Experience idx={idx} author={author} text={text} />)}
 				</div>
 			}
 			</div>

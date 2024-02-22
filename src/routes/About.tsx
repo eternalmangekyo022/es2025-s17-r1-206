@@ -47,7 +47,7 @@ export default function About() {
 
 		<div className='people'>
 				{people.map(({ name, position, img }) => <div className='person'>
-					<img src={img} alt="" />
+					<img src={img} alt={name} />
 					<h3>{name}</h3>
 					<span>{position}</span>
 				</div>)}
