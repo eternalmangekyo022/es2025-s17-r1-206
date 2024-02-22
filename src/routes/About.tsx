@@ -15,12 +15,12 @@ export default function About() {
 		{
 			name: "Raj Singh",
 			position: "Chief Culinary Curator",
-			img: Person2
+			img: Person3
 		},
 		{
 			name: "Sophia Dawson",
 			position: "Director of Community Engagement",
-			img: Person3
+			img: Person2
 		},
 		{
 			name: "Lucas Kim",
@@ -36,7 +36,7 @@ export default function About() {
 
 
 	return <>
-	<div className="wrapper">
+	<div className="team-wrapper">
 		<h1>About Us</h1>
 		<h4>Embracing The Joy of Dining</h4>
 
@@ -53,7 +53,6 @@ export default function About() {
 				</div>)}
 		</div>
 	</div>
-
 		<div className='purple'>
 			<div>
 				<h1>Connect with DineEase</h1>
