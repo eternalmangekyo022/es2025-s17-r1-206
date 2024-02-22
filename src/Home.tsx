@@ -22,7 +22,7 @@ export default function Home() {
 				<button type="button"><img width='13%' src={Search} alt="Explore Restaurants" />Explore Restaurants</button>
 			</div>
 			<div className="hero-image">
-				<img src={width > 768 ? DineEase: DineEaseVector} alt="DineEase Representation" title="DineEase Representation"/>
+				<img src={width > 768 ? DineEase: DineEaseVector} alt="DineEase Logo" title="DineEase Logo"/>
 			</div>
 			<div className="blur" />
 		</div>

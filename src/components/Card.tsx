@@ -2,7 +2,7 @@ import Star from '../assets/images/star.png'
 
 export default function Card({ name, description, rating, image, key }: Card & { key: number }) {
 	return <div className='card' key={key}>
-		<img src={image} alt="" />
+		<img src={image} alt={name} title={name} />
 		<div>
 			<span>{name}</span>
 			<div className='stars'>
