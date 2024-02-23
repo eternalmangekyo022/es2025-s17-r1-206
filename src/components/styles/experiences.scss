@@ -95,16 +95,20 @@ $height: 40rem;
 	$width: 90%;
 	.experiences {
 		align-items: center;
+		height: calc($height + 14rem);
+
 		h1 {
 			width: $width;
 			font-size: 2rem;
 			text-align: start;
+			&:before {
+				left: -10%;
+				top: -10%;
+			}
 		}
-		height: calc($height + 14rem);
 
 		.cards {
 			width: $width;
-
 			display: flex;
 			justify-content: space-evenly;
 			align-items: center;
