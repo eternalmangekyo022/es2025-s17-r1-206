@@ -22,7 +22,7 @@ function Experience({ author, text, idx }: Experience & { idx: number }) {
 	return <div className="experience" key={idx.toString()}>
 		<p>{text}</p>
 		<span>{author}</span>
-		<img src={Quote} alt="Quote" width='5%' />
+		<img src={Quote} alt="Quote" />
 	</div>
 }
 
