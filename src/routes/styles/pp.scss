@@ -30,3 +30,9 @@ $footer-h: 25vh;
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	p {
+		font-size: 1.1rem;
+	}
+}
