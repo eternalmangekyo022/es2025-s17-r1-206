@@ -1,0 +1,14 @@
+$header-h: 6vh;
+$footer-h: 25vh;
+
+.wrapper {
+	width: 100vw;
+	min-height: calc(100vh - ($footer-h + $header-h));
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	.wrapper-reduced {
+		width: 80%;
+	}
+}

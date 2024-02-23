@@ -4,8 +4,8 @@ import './styles/contact.scss'
 export default function Contact() {
 
 	return <>
-		<div /**100vw */>
-			<div /* 80% */>
+		<div /**100vw */ className='wrapper'>
+			<div /* 80% */ className='wrapper-reduced'>
 				<div /* 40%, flex-col */>
 					<div>
 						<h1>Contact Information</h1>
