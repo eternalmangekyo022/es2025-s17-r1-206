@@ -83,8 +83,9 @@ h1 {
 @media (max-width: 768px) {
 	.people {
 		margin-bottom: 2rem;
-
+		height: 55vh !important;
 		.person {
+			width: 40% !important;
 			img {
 				width: 8rem;
 				aspect-ratio: 1/1;
@@ -96,6 +97,9 @@ h1 {
 		height: 40vh;
 		> div {
 			height: 80%;
+			width: 89%;
+			justify-content: center;
+			gap: 3rem;
 		}
 	}
 }

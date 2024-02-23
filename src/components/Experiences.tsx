@@ -34,8 +34,8 @@ export default function Experiences() {
 			{width > 768 ? <><div>
 					<Experience idx={0} author={experiences[0].author} text={experiences[0].text} />
 				</div>
-				<div>
-					{[experiences[1], experiences[2]].map(({ author, text }, idx) => <Experience idx={idx} author={author} text={text} />)}
+				<div className="second">
+					{[experiences[2], experiences[1]].map(({ author, text }, idx) => <Experience idx={idx} author={author} text={text} />)}
 				</div></>: <div>
 					{experiences.map(({ author, text }, idx) => <Experience idx={idx} author={author} text={text} />)}
 				</div>

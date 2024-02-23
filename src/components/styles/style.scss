@@ -10,6 +10,12 @@ $shadow:
   -2px 0 4px rgba(0, 0, 0, 0.05),
   2px 0 4px rgba(0, 0, 0, 0.05);
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   font-family: "Roboto";
   font-style: normal;
@@ -371,6 +377,10 @@ footer {
     }
   }
   .featured {
+    .featured-text {
+      margin: 0;
+      @include flex-center;
+    }
     height: fit-content;
     .featured-cards {
       &:before,
