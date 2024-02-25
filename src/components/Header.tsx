@@ -12,14 +12,14 @@ export default function Header() {
 
   return <>
     <header>
-      <div className='navbar'>
+      <nav className='navbar'>
         <img src={Logo} alt="Logo" />
         {width <= 768 ? <><img src={Menu} alt="Menu" className='menu-icon' /></>: <>
           <Link style={linkStyle} to='/' className='navlink'>Home</Link>
           <Link style={linkStyle} to='/about' className='navlink'>About Us</Link>
           <Link style={linkStyle} to='/contact' className='navlink' >Contact</Link>
         </>}
-      </div>
+      </nav>
     </header>
   </>
 }

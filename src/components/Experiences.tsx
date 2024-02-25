@@ -28,7 +28,7 @@ function Experience({ author, text, idx }: Experience & { idx: number }) {
 
 export default function Experiences() {
 	const [width,] = useScreen();
-	return <div className="experiences">
+	return <section className="experiences">
 		<h1>Delightful Experiences Shared by Our Guests</h1>
 		<div className="cards">
 			{width > 768 ? <><div>
@@ -41,5 +41,5 @@ export default function Experiences() {
 				</div>
 			}
 			</div>
-	</div>
+	</section>
 }
