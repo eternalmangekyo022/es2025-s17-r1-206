@@ -13,15 +13,20 @@ export default function Contact() {
 					</div>
 					<div>
 						<div>
-							<img src="" alt="" /><span></span>
+							<img src="" alt=""  />
+							<span>
+
+							</span>
 						</div>
 						
 						<div>
-							<img src="" alt="" /><span></span>
+							<img src="" alt="" />
+							<span></span>
 						</div>
 						
 						<div>
-							<img src="" alt="" /><span></span>
+							<img src="" alt="" />
+							<span></span>
 						</div>
 					</div>
 					<div>
