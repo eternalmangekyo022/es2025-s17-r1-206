@@ -26,4 +26,9 @@ declare global {
 		position: string
 		img: string
 	}
+
+	interface TimeLine {
+		date: number
+		description: string
+	}
 }
