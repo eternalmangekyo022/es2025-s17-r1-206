@@ -1,9 +1,14 @@
+//assets
 import DineEase from './assets/images/DineEase.png'
 import DineEaseVector from './assets/images/Hero Illustrationvector.svg'
 import Search from './assets/images/Search Icon.png'
+import topRated from './assets/data/top-rated-restauransts.json'
+
+//components
 import Card from './components/Card.tsx'
 import Experiences from './components/Experiences.tsx'
-import topRated from './assets/data/top-rated-restauransts.json'
+
+//hooks
 import useScreen from './hooks/useScreen.ts'
 
 export default function Home() {
