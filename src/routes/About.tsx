@@ -1,9 +1,15 @@
+//module scoped styles
 import './styles/about.scss'
+
+//assets, images
 import Person1 from '../assets/images/Person1.png'
 import Person2 from '../assets/images/Person2.png'
 import Person3 from '../assets/images/Person3.png'
 import Person4 from '../assets/images/Person4.png'
 import Person5 from '../assets/images/Person5.png'
+
+//components
+import TimeLine from '../components/TimeLine.tsx'
 
 export default function About() {
 	const people: Person[] = [
@@ -40,7 +46,7 @@ export default function About() {
 		<h1>About Us</h1>
 		<h4>Embracing The Joy of Dining</h4>
 
-		<div></div>
+		<TimeLine />
 
 		<h1>Meet our Team</h1>
 		<h4>The Culinary Visionaries Behind DineEase</h4>
