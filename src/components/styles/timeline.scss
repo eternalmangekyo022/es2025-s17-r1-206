@@ -24,6 +24,7 @@ $purple: (
 	margin-bottom: 10vh;
 
 	&:before {
+		display: inline-block;
 		content: "";
 		@include center-abs;
 		width: 100%;
