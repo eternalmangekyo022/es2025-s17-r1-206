@@ -1,5 +1,10 @@
+//styles
 import './styles/experiences.scss'
+
+//assets
 import Quote from '../assets/images/Quote markvector.svg'
+
+//hooks
 import useScreen from '../hooks/useScreen.ts'
 
 const experiences: Experience[] = [
