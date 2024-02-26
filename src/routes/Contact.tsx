@@ -23,12 +23,12 @@ export default function Contact() {
 	return <>
 		<div /**100vw */ className='wrapper'>
 			<div /* 90% */ className='wrapper-inner'>
-				<div /* 40%, flex-col */ className='contact-card'>
-					<div className='contact-title'>
+				<section /* 40%, flex-col */ className='contact-card'>
+					<section className='contact-title'>
 						<h1>Contact Information</h1>
 						<h4>Have an inquery? Fill out the form to contact our team.</h4>
-					</div>
-					<div className='contact-information'>
+					</section>
+					<section className='contact-information'>
 						<div>
 							<img src={Tel} alt=""  />
 							<a href={`tel:${tel}`}>{tel}</a>
@@ -43,15 +43,15 @@ export default function Contact() {
 							<img src={Location} alt="" />
 							<a href={`https://www.google.com/maps/search/${contactLocation}`}>{contactLocation}</a>
 						</div>
-					</div>
-					<div className='socials'>
+					</section>
+					<section className='socials'>
 						<img src={Facebook} alt="Facebook" />
 						<img src={Instagram} alt="Instagram" />
 						<img src={Twitter} alt="Twitter" />
-					</div>
+					</section>
 
-				</div>
-				<div /* 60% */ className='contact-form'>
+				</section>
+				<section /* 60% */ className='contact-form'>
 					<h1>Contact Us</h1>
 					<h4>Have an inquery? Fill out the form to contact our team.</h4>
 					<form onSubmit={onSubmit}>
@@ -62,7 +62,7 @@ export default function Contact() {
 						<input id='message' type="text" placeholder="Message" />
 						<button type="submit">Send Message</button>
 					</form>
-				</div>
+				</section>
 			</div>
 		</div>
 	</>
