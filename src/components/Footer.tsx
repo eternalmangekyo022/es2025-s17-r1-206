@@ -1,9 +1,13 @@
+// link, so we can navigate through pages
 import { Link } from 'react-router-dom'
+
+// images
 import Logo from '../assets/images/Logomarkvector.svg'
 import Facebook from '../assets/images/Facebook Iconvector.svg'
 import Instagram from '../assets/images/Instagram Iconvector.svg'
 import Twitter from '../assets/images/Twitter Iconvector.svg'
 
+// styles
 import './styles/footer.scss'
 
 export default function Footer() {
