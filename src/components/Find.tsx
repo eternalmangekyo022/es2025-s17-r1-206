@@ -1,5 +1,10 @@
+// hooks
 import { useState } from 'react'
+
+// styles
 import './styles/find.scss'
+
+// images
 import Filter from '../assets/images/Filter Iconvector.svg'
 import Search from '../assets/images/Search Iconvector.svg'
 import SearchPurple from '../assets/images/Search Iconvector Purple.svg'
@@ -17,6 +22,7 @@ export default function Find() {
 	// determines whether simple search is enabled or not
 	const [isSimple, setIsSimple] = useState(true);
 
+	//prevent reloading page when submitting form
 	const onSubmit: React.FormEventHandler<HTMLFormElement> = e => {
 		e.preventDefault()
 	}
