@@ -94,10 +94,8 @@ class RestaurantCard extends HTMLElement {
 		}
 
 		const observer = new MutationObserver((mutationsList, observer) => {
-			// Iterate over each mutation
 			for(const mutation of mutationsList) {
 				if (mutation.type === 'attributes') {
-				// React to the attribute change
 				console.log(`Attribute ${mutation.attributeName} changed to: ${this.getAttribute(mutation.attributeName)}`);
 				if(mutation.attributeName === 'layout') {
 					if(this.getAttribute('layout') === 'vertical') vertical()
