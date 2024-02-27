@@ -1,5 +1,5 @@
 //hooks
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 //styles
 import './styles/contact.scss'
@@ -31,6 +31,10 @@ export default function Contact() {
 		e.preventDefault()
 		setFormData({ ...initial });
 	}
+
+	useEffect(() => {
+		document.title = 'DineEase™ - Contact Us'
+	}, [])
 
 	return <>
 		<div /**100vw */ className='wrapper'>

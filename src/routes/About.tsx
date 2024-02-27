@@ -1,6 +1,9 @@
 //module scoped styles
 import './styles/about.scss'
 
+// hooks
+import { useEffect } from 'react'
+
 //assets, images
 import Person1 from '../assets/images/Person1.png'
 import Person2 from '../assets/images/Person2.png'
@@ -40,6 +43,9 @@ export default function About() {
 		},
 	]
 
+	useEffect(() => {
+		document.title = 'DineEase™ - About Us'
+	}, [])
 
 	return <>
 	<div className="team-wrapper">

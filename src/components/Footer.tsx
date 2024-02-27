@@ -14,6 +14,7 @@ export default function Footer() {
 	const phoneNum = '+36 30 123 4567'
 	const email = 'support@dineease.com'
 
+
 	return <footer>
 			<div className='footer-box'>
 				<div className='footer-box-inner between'>
@@ -23,7 +24,7 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className='footer-box-inner between'>
-					<Link to='/privacy-policy'>Privacy Policy</Link>
+					<Link onClick={() => document.title = 'DineEase™ - Privacy Policy'} to='/privacy-policy'>Privacy Policy</Link>
 					<div className='socials'>
 						<img src={Facebook} alt="Follow us on Facebook" title="Follow us on Facebook"/>
 						<img src={Instagram} alt="Follow us on Instagram" title="Follow us on Instagram"/>

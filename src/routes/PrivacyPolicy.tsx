@@ -1,8 +1,11 @@
+import { useEffect } from 'react'
 import './styles/pp.scss'
 
 export default function PP() {
+	useEffect(() => {
+		document.title = 'DineEase™ - Privacy Policy'
+	}, [])
 	
-
 	return <div className='pp'>
 		<div>
 			<h1>Privacy Policy</h1>

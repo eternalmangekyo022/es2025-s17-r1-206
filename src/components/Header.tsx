@@ -15,9 +15,9 @@ export default function Header() {
       <nav className='navbar'>
         <img src={Logo} alt="Logo" />
         {width <= 768 ? <><img src={Menu} alt="Menu" className='menu-icon' /></>: <>
-          <Link style={linkStyle} to='/' className='navlink'>Home</Link>
-          <Link style={linkStyle} to='/about' className='navlink'>About Us</Link>
-          <Link style={linkStyle} to='/contact' className='navlink' >Contact</Link>
+          <Link onClick={() => document.title = 'DineEase™'} style={linkStyle} to='/' className='navlink'>Home</Link>
+          <Link onClick={() => document.title = 'DineEase™ - About'} style={linkStyle} to='/about' className='navlink'>About Us</Link>
+          <Link onClick={() => document.title = 'DineEase™ - Contact'} style={linkStyle} to='/contact' className='navlink' >Contact</Link>
         </>}
       </nav>
     </header>
