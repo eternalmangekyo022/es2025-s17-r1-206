@@ -12,23 +12,25 @@ export default function Footer() {
 
 	return <footer>
 			<div className='footer-box'>
-				<div className="footer-box-inner">
-					<img src={Logo} alt="" />
-					<Link to='/privacy-policy'>Privacy Policy</Link>
-					<div className='availability'>
-						<a style={{ display: 'inline' }} href={`tel:${phoneNum}`}>{phoneNum}</a>
-						<a style={{ display: 'inline' }} href={`mailto:${email}`}>{email}</a>
-					</div>
-					<span>©2024 All rights reserved</span>
-				</div>
-				<div className="footer-box-inner second">
-					<span>Follow Us</span>
+				<div className='footer-box-inner between'>
+					<img src={Logo} alt="DineEase Logo" />
 					<div>
+						<span>Follow Us</span>
+					</div>
+				</div>
+				<div className='footer-box-inner between'>
+					<Link to='/privacy-policy'>Privacy Policy</Link>
+					<div className='socials'>
 						<img src={Facebook} alt="Follow us on Facebook" title="Follow us on Facebook"/>
 						<img src={Instagram} alt="Follow us on Instagram" title="Follow us on Instagram"/>
 						<img src={Twitter} alt="Follow us on Twitter" title="Follow us on Twitter" />
 					</div>
 				</div>
+				<div className='footer-box-inner start'>
+					<a style={{ display: 'inline' }} href={`tel:${phoneNum}`}>{phoneNum}</a>
+					<a style={{ display: 'inline' }} href={`mailto:${email}`}>{email}</a>
+				</div>
+				<span>©2024 All rights reserved</span>
 			</div>
 		</footer>
 }

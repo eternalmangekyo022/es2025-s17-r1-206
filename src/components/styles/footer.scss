@@ -14,58 +14,50 @@ footer {
 	height: $footer-h;
 	background-color: black;
 	z-index: 10;
+	color: white;
+	font-size: 1rem;
+	font-weight: 100;
+
+	a {
+		text-decoration: none;
+		color: white;
+	}
 
 	.footer-box {
 		position: relative;
 		width: 85%;
 		height: 65%;
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 
 		.footer-box-inner {
-			width: clamp(22rem, 50%, 26rem);
-			height: 100%;
+			width: 100% !important;
+			height: 3rem;
 			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-			align-items: start;
-			color: white;
+			align-items: center;
 
-			a {
-				text-decoration: none;
-				color: white;
-			}
-
-			.availability {
-				display: flex;
+			&.between {
 				justify-content: space-between;
-				align-items: center;
-				height: 1rem;
-				width: 100%;
-				overflow: hidden;
-			}
-		}
 
-		.footer-box-inner.second {
-			width: 10rem;
-			height: 50%;
-			display: flex;
-			justify-content: space-evenly;
-			align-items: start;
-			flex-direction: column;
-			span {
-				width: 100%;
-				height: 50%;
-				font-size: 1rem;
-				text-align: center;
-				font-weight: 300;
+				> div {
+					width: 10rem;
+					&.socials {
+						display: flex;
+						gap: 0.6rem;
+						img {
+							width: clamp(2rem, 10%, 10rem);
+						}
+					}
+				}
+
+				@media (max-width: 768px) {
+					height: 3rem;
+				}
 			}
-			> div {
-				display: flex;
-				justify-content: space-evenly;
-				align-items: center;
-				width: 100%;
-				height: 50%;
+
+			&.start {
+				gap: 10%;
 			}
 		}
 	}
