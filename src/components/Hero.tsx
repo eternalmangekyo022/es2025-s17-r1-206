@@ -21,7 +21,7 @@ export default function Hero() {
 			From international dishes to traditional delights and gastronomic adventures,
 			find your perfect spot with DineEase.
 		</p>
-		<button type="button"><img width='13%' src={Search} alt="Explore Restaurants" />Explore Restaurants</button>
+		<button type="button"><img width='13%' src={Search} alt="Search" />Explore Restaurants</button>
 	</section>
 	<div className="hero-image">
 		<img src={width > 768 ? DineEase: DineEaseVector} alt="DineEase Logo" title="DineEase Logo"/>

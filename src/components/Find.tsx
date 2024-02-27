@@ -1,28 +1,55 @@
 import { useState } from 'react'
 import './styles/find.scss'
+import Filter from '../assets/images/Filter Iconvector.svg'
+import Search from '../assets/images/Search Iconvector.svg'
+import SearchPurple from '../assets/images/Search Iconvector Purple.svg'
+import Location from '../assets/images/Location Iconvector.svg'
 
 export default function Find() {
+	// input for simple search
 	const [input, setInput] = useState('');
 
-	return <div className='wrapper'>
+	//input for complex search
+	const [cusine, setCusine] = useState('');
+	const [location, setLocation] = useState('');
+	const [name, setName] = useState('');
+
+	// determines whether simple search is enabled or not
+	const [isSimple, setIsSimple] = useState(true);
+
+	const onSubmit: React.FormEventHandler<HTMLFormElement> = e => {
+		e.preventDefault()
+	}
+
+	return <section className='find-wrapper'>
 		<div className='search'>
 			<h1>Find Your Perfect Dining Spot</h1>
 			<h2>Search by Cuisine, Location, or Name</h2>
 			<div className='searchbar'>
-				<div className='input'>
-					<img src="" alt="Search icon" title="Search" />
-					<input type="text" placeholder='Search for restaurants' value={input} onChange={e => setInput(e.target.value)} />
-					<img src="" alt="" />
-				</div>
-				<div className='restaurants'>
-					<button>
-						<img src="" alt="" />
+				<form onSubmit={e => onSubmit(e)} className={`input${isSimple ? '': ' complex'}`}>
+					{isSimple ? <>
+						<img id='searchImage' src={Search} alt="Search icon" title="Search" />
+						<input type="text" placeholder='Search for restaurants' value={input} onChange={e => setInput(e.target.value)} />
+						<img id='filterImage' onClick={() => setIsSimple(false)} src={Filter} alt="Filter" />
+					</>: <>
+						<input placeholder='Cusine' type="text" className='cusine'  value={cusine} onChange={e => setCusine(e.target.value)}/>
+						<div className='location-input'>
+							<img src={Location} alt="Location" />
+							<input placeholder='Location' type="text" className='location' value={location} onChange={e => setLocation(e.target.value)}/>
+						</div>
+						<input placeholder='Name' type="text" className='name' value={name} onChange={e => setName(e.target.value)}/>
+						<button className='simple-button' onClick={() => setIsSimple(true)}>
+							Simple search
+						</button>
+					</>}
+					<button className='search-button' type="submit">
+						<img src={SearchPurple} alt="Search" title='Search' />
 					</button>
-				</div>
+				</form>
 			</div>
 		</div>
-		<div>
+		<div className='results'>
 			
 		</div>
-	</div>
+	</section>
 }

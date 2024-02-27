@@ -44,12 +44,12 @@ export default function About() {
 	return <>
 	<div className="team-wrapper">
 		<h1>About Us</h1>
-		<h4>Embracing The Joy of Dining</h4>
+		<h2>Embracing The Joy of Dining</h2>
 
 		<TimeLine />
 
 		<h1>Meet our Team</h1>
-		<h4>The Culinary Visionaries Behind DineEase</h4>
+		<h2>The Culinary Visionaries Behind DineEase</h2>
 
 		<div className='people'>
 				{people.map(({ name, position, img }) => <div className='person'>

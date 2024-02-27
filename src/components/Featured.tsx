@@ -7,7 +7,7 @@ export default function Featured() {
 	return <section className="featured">
 		<div className='featured-text'>
 			<h1>Featured Restaurants</h1>
-			<h3>Discover Unforgettable Dining Destinations</h3>
+			<h2>Discover Unforgettable Dining Destinations</h2>
 		</div>
 		<div className='featured-cards'>
 			{topRated.map(({ description, image, name, rating }, idx) => <Card key={idx} image={image} name={name} description={description} rating={rating} />)}
