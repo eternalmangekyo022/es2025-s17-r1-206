@@ -30,7 +30,7 @@ export default function Footer() {
 					<a style={{ display: 'inline' }} href={`tel:${phoneNum}`}>{phoneNum}</a>
 					<a style={{ display: 'inline' }} href={`mailto:${email}`}>{email}</a>
 				</div>
-				<span>©2024 All rights reserved</span>
+				<span id='trademark'>©2024 All rights reserved</span>
 			</div>
 		</footer>
 }
