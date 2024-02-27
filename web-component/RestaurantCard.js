@@ -5,28 +5,46 @@
 class RestaurantCard extends HTMLElement {
 	constructor() {
 		super()
+		this.initialText = this.textContent.trim()
 	}
 
 	connectedCallback() {
-		const div = document.createElement('div')
-		const img = document.createElement('img')
-		const button = document.createElement('button')
-		const h1 = document.createElement('h1')
-		const p = document.createElement('p')
+		const vertical = () => {
+			this.innerHTML = '';
 
-		h1.innerHTML = this.getAttribute('title')
-		img.src = this.getAttribute('imageSrc')
+			const div = document.createElement('div')
+			const img = document.createElement('img')
+			const button = document.createElement('button')
+			const h1 = document.createElement('h1')
+			const p = document.createElement('p')
+	
+			h1.innerHTML = this.getAttribute('title')
+			h1.style.fontWeight = '600'
+			h1.style.fontSize = '2rem';
 
-		const id = this.getAttribute('id')
-		button.onclick = () => this.dispatchEvent(new CustomEvent('select', {  bubbles: true, detail: { id }}))
-		button.textContent = 'Continue'
+			img.src = this.getAttribute('imageSrc')
+			img.style.width = '90%'
+			img.style.height = '13rem'
+			img.style.borderRadius = '.5rem';
+	
+			const id = this.getAttribute('id')
+			button.onclick = () => this.dispatchEvent(new CustomEvent('select', {  bubbles: true, detail: { id }}))
+			button.textContent = 'Continue'
+	
+			p.textContent = this.initialText;
+	
+			div.appendChild(img)
+			div.appendChild(h1)
+			div.appendChild(p)
+			div.appendChild(button)
+			this.appendChild(div)
+		}
 
-		p.textContent = this.textContent.trim()
+		const horizontal = () => {
+			this.innerHTML = '';
 
-		div.appendChild(img)
-		div.appendChild(h1)
-		div.appendChild(p)
-		div.appendChild(button)
+
+		}
 
 		const observer = new MutationObserver((mutationsList, observer) => {
 			// Iterate over each mutation
@@ -34,13 +52,17 @@ class RestaurantCard extends HTMLElement {
 				if (mutation.type === 'attributes') {
 				// React to the attribute change
 				console.log(`Attribute ${mutation.attributeName} changed to: ${this.getAttribute(mutation.attributeName)}`);
+				if(mutation.attributeName === 'layout') {
+					if(this.getAttribute('layout') === 'vertical') vertical()
+					else horizontal();
+				}
 			}
 		}})
 
 		const config = { attributes: true };
 		observer.observe(this, config);
-		this.innerHTML = '';
-		this.appendChild(div)
+
+		vertical();
 	}
 }
 
