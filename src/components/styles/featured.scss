@@ -156,6 +156,13 @@ $shadow:
 			.card {
 				width: 90% !important;
 				max-width: 50rem;
+
+				> div {
+					width: 90%;
+					* {
+						margin: 0;
+					}
+				}
 			}
 		}
 	}
