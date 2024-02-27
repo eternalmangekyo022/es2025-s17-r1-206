@@ -13,11 +13,12 @@ $purple: (
 .find-wrapper {
 	position: relative;
 	width: 100%;
-	height: 60vh;
+	height: fit-content;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 3rem;
 
 	padding-block: 2rem;
 
@@ -155,9 +156,18 @@ $purple: (
 	}
 
 	.results {
-		height: 60%;
+		height: fit-content;
 		display: flex;
 		justify-content: center;
 		gap: 2rem;
+
+		.featured-cards {
+			position: static;
+
+			.card {
+				width: 30% !important;
+				height: 100%;
+			}
+		}
 	}
 }

@@ -10,6 +10,12 @@ import Search from '../assets/images/Search Iconvector.svg'
 import SearchPurple from '../assets/images/Search Iconvector Purple.svg'
 import Location from '../assets/images/Location Iconvector.svg'
 
+// components
+import Card from './Card.tsx'
+
+// data
+import Restaurants from '../assets/data/restaurants.json'
+
 export default function Find() {
 	// input for simple search
 	const [input, setInput] = useState('');
@@ -55,7 +61,11 @@ export default function Find() {
 			</div>
 		</div>
 		<div className='results'>
-			
+			<div className="featured">
+				<div className="featured-cards">
+					{[0, 1, 2].map(i => <Card description={Restaurants[i].description} image={Restaurants[i].image} key={Restaurants[i].id} name={Restaurants[i].name} rating={Restaurants[i].rating} cuisine={Restaurants[i].cuisine} />)}
+				</div>
+			</div>
 		</div>
 	</section>
 }
