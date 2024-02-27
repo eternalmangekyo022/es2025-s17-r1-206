@@ -24,7 +24,7 @@ export default function TimeLine() {
 		}
 	];
 
-	return <div className='timeline-container'>
+	return <section className='timeline-container'>
 		{timelines.map(({ date, description }, idx) => <>
 			<div className={`timeline${(idx + 1) % 2 !== 0 ? " reverse": ""}`}>
 				<div className="circle" /* circle, center */ data-date={date}>
@@ -40,6 +40,6 @@ export default function TimeLine() {
 				<div></div>
 			</div>
 		</>)}
-	</div>
+	</section>
 	
 }
