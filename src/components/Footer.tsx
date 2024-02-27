@@ -4,6 +4,8 @@ import Facebook from '../assets/images/Facebook Iconvector.svg'
 import Instagram from '../assets/images/Instagram Iconvector.svg'
 import Twitter from '../assets/images/Twitter Iconvector.svg'
 
+import './styles/footer.scss'
+
 export default function Footer() {
 	const phoneNum = '+36 30 123 4567'
 	const email = 'support@dineease.com'
