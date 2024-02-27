@@ -163,10 +163,16 @@ $purple: (
 
 		.featured-cards {
 			position: static;
+			flex-wrap: wrap;
 
 			.card {
 				width: 30% !important;
 				height: 100%;
+
+				@media (max-width: 768px) {
+					width: 90% !important;
+					height: 30% !important;
+				}
 			}
 		}
 	}
