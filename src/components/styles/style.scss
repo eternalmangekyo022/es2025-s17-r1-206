@@ -74,16 +74,3 @@ main {
     }
   }
 }
-
-/*
-@mixin test($width, $height) {
-  width: $width;
-  height: $height;
-  
-  display: flex;
-}
-
-.test {
-  @include test(100px, 1000px);
-}
-*/
